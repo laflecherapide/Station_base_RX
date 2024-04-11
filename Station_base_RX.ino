@@ -27,7 +27,7 @@ uint8_t len;  // Taille du buffer de réception
 unsigned long Time_ms;  // "temps" en milliseconde depuis le dernier reset du uP
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   //while (!Serial) { delay(1); } // Attente de l'ouverture du moniteur série : !!!!!!!!!!! ATTENTION BLOQUANT !!!!!!!!!!
 
   pinMode(RFM69_RST, OUTPUT);
@@ -91,7 +91,7 @@ void loop() {
     }
   } else {
 
-    if (millis() >= Time_ms + 333) {  //prends une mesure toute les 10ms
+    if (millis() >= Time_ms + 1500) {  //prends une mesure toute les 10ms
       Serial.println(".");
       Time_ms = millis();
     }
