@@ -24,7 +24,7 @@ RH_RF69 rfm69(RFM69_CS, RFM69_INT);
 String tableau_reception[40];
 int compteur = 0;
 int cpt_char = 0;
-uint8_t buf[RH_RF69_MAX_MESSAGE_LEN];  // Buffer de réception 
+uint8_t buf[RH_RF69_MAX_MESSAGE_LEN];  // Buffer de réception
 // FORMAT :Packetnum|Time_ms|TMP36_Temperature|BMP280_Temperature|BMP280_Pression|BMP280_AltitudeApprox|OzoneConcentration;\r\n
 uint8_t len;  // Taille du buffer de réception
 char *token;                            // Pointeur vers le token extrait
